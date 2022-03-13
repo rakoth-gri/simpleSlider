@@ -1,0 +1,124 @@
+/* Стилизация фона **********/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    position: relative;
+    padding: 2%;       
+}
+
+.body_bg {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    z-index: -1;   
+}
+
+main {
+    border: 1px solid rgb(194, 40, 40);
+    box-shadow: 2px 2px 20px rgb(214, 69, 24);
+    width: 65%;    
+    margin: 0px auto 50px 8%;   
+    color: #d6c90f;
+    font-size: 30px;
+    border-radius: 7px;
+    padding: inherit;
+    text-shadow: 3px 2px 8px rgb(195, 88, 55);   
+}
+
+
+/********** Стилизация slider галереи ********/
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {   
+    padding: 25px;
+    font-size: 30px;
+    text-align: center; 
+}
+
+.slider {    
+    display: flex;    
+    justify-content: center;
+    height: 500px;   
+    position: relative;
+}
+
+
+.slider__image {   
+    width: 80%;
+    height: inherit;
+    /* скроем содержимое, выходящее за пределы размеров блока с классом .slider__image */
+    overflow: hidden;
+}
+
+/* Стилизуем дополнительный элемент, для которого динамически определим ширину и сгенерируем коллекцию изображений (JavaScript)*/
+.slider__image__tracker {
+    display: flex;   
+    height: inherit;
+    transition: 0.4s transform linear;    
+}
+
+.slider__image__tracker img {   
+    object-fit: contain;
+    height: inherit;    
+}
+
+/* Стилизация управляющих стрелок слайдера */
+
+.slider__right, .slider__left {
+    width: 10%;
+    height: inherit;   
+    background-color: rgba(0,0,0, .4);    
+    position: relative;    
+}
+
+.slider__right_icon, .slider__left_icon { 
+     /* размещение стрелок ровно в центральной точке блока */ 
+    position: absolute;
+    top: 50%;
+    left: 50%;   
+    transform: translate(-50%,-50%) rotateZ(90deg);
+
+    cursor: pointer;
+    z-index: 2;
+    display: block;    
+}
+
+.slider__right_icon {
+    transform: translate(-50%,-50%) rotateZ(-90deg);     
+}
+
+/* Стилизация контейнера кнопок */
+
+#btnsWrapper {
+    margin: 20px 0px;   
+    display: flex;
+    height: 100px;
+    justify-content: center;
+
+}
+
+.btnsWrapper__item {
+    width: 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(194, 40, 40);
+    box-shadow: 1px 1px 8px rgb(214, 69, 24);
+    margin: .5%;
+}
+
+.btnsWrapper__item_img {   
+    object-fit: contain;
+    width: 100%;
+    height: 100%;    
+}

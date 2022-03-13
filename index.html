@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SLIDER </title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer="defer" src="./script.js"></script>
+</head>
+<body>
+
+    <!-- Вставка фонового изображения для body -->
+    <img src="https://phonoteka.org/uploads/posts/2021-07/1625130370_19-phonoteka_org-p-oboi-na-android-zvezdnie-voini-krasivo-19.jpg" alt="BG" class="body_bg" loading="lazy">
+    
+    <main>
+
+        <!-- Блок описания слайдов -->
+        <div class="description">
+            <b class="slideNumber"> Слайд 1 </b>
+            <b class="characterName"> Магистр Йодо </b>            
+        </div>            
+            
+        <h3 class="title"> Моя фотогалерея </h3>
+
+        <!-- Контейнер слайдера -->
+        <div class="slider">
+            <div class="slider__left"> 
+                <img class="slider__left_icon" src="./icons/blaster.png">                   	 
+            </div>
+
+            <div class="slider__image">
+                <div class="slider__image__tracker">
+                    <!-- Сюда будут сгенерерированы изображения -->
+                </div>                    
+            </div> 
+
+            <div class="slider__right"> 	
+                <img class="slider__right_icon" src="./icons/blaster.png">	 
+            </div>
+        </div>
+
+        <!-- Контейнер кнопок слайдера -->
+        <div id="btnsWrapper"> 
+            <!-- Сюда будут сгенерерированы кнопки управления -->    
+        </div>
+
+    </main>
+      
+</body>
+</html>
+
+
+<!-- 
+    Ссылка на иконки управляющих стрелок
+    БЛАСТЕР: https://www.iconfinder.com/search?q=blaster&price=free -->
