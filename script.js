@@ -13,10 +13,10 @@ const sliderImage = slider.querySelector(".slider__image");
 const sliderImageTracker = slider.querySelector(".slider__image__tracker");
 
 // элемент для отображения текущего номера слайда
-const slideNumber = document.querySelector(".slideNumber");
+const slideNumber = main.querySelector(".slideNumber");
 
 // элемент для отображения имени персонажа
-const characterName = document.querySelector(".characterName");
+const characterName = main.querySelector(".characterName");
 
 
 // Переменные состояния:
