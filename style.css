@@ -83,22 +83,23 @@ main {
 }
 
 .slider__right_icon, .slider__left_icon { 
-     /* размещение стрелок ровно в центральной точке блока */ 
+    /* размещение стрелок ровно в центральной точке блока */ 
     position: absolute;
     top: 50%;
     left: 50%;   
     transform: translate(-50%,-50%) rotateZ(90deg);
-
     cursor: pointer;
     z-index: 2;
-    display: block;    
+    display: block;
+    transition: 0.3s ease;    
 }
+
 
 .slider__right_icon {
     transform: translate(-50%,-50%) rotateZ(-90deg);     
 }
 
-/* Стилизация контейнера кнопок */
+/* Стилизация управляющих кнопок */
 
 #btnsWrapper {
     margin: 20px 0px;   
@@ -111,14 +112,19 @@ main {
 .btnsWrapper__item {
     width: 10%;
     cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid rgb(194, 40, 40);
-    box-shadow: 1px 1px 8px rgb(214, 69, 24);
+    border-radius: 5px;     
     margin: .5%;
+    transition: 0.3s ease; 
 }
 
 .btnsWrapper__item_img {   
     object-fit: contain;
     width: 100%;
     height: 100%;    
+}
+
+
+/* Эффект при наведении на управляющие компоненты */
+.slider__right_icon:hover, .slider__left_icon:hover, .btnsWrapper__item:hover { 
+    box-shadow: 1px 1px 8px rgb(214, 69, 24);
 }
